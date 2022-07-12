@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>XSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <main class="flex justify-center items-center w-screen h-screen bg-cover bg-no-repeat bg-center" style="background-image: url('https://source.unsplash.com/random/?SEOUL')">
+    <div class="inline-flex flex-col rounded-xl p-8 rounded-xl bg-gradient-to-r bg-white/90 border border-gray-200 w-1/2 h-48 max-w-xs">
+      <h1 class="text-lg font-semibold">✈️ Where do you want to go?</h1>
+      <form method="get">
+        <label for="city" class="block">Please select country</label>
+        <select id="city" name="city" class="inline-block rounded-md bg-white-50 border border-white-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-1.5">
+          <option value="stockholm">Stockholm</option>
+          <option value="malmö">Malmö</option>
+          <option value="karlskrona">Karlskrona</option>
+          <option value="aarhus">Aarhus</option>
+          <option value="jacksonville">Jacksonville</option>
+          <option value="seoul" selected>Seoul</option>
+          <option value="bangkok">Bangkok</option>
+        </select>
+        <button type="submit" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white px-2 py-1 font-semibold text-sm text-white rounded-md shadow-sm">Go!</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
